@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>DevFlow AI</title>
+        <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>
+          <div class="container">
+              <h1>🚀 DevFlow AI</h1>
+                  <p class="subtitle">Describe your app and get a complete DevOps starter kit instantly</p>
+
+                      <div class="form-group">
+                            <label>App Description</label>
+                                  <textarea id="appDesc" placeholder="e.g. A Python Flask app with PostgreSQL database"></textarea>
+                                      </div>
+
+                                          <div class="form-group">
+                                                <label>Language / Framework</label>
+                                                      <select id="language">
+                                                              <option value="python">Python (Flask/Django)</option>
+                                                                      <option value="node">Node.js (Express)</option>
+                                                                              <option value="react">React Frontend</option>
+                                                                                      <option value="java">Java (Spring Boot)</option>
+                                                                                            </select>
+                                                                                                </div>
+
+                                                                                                    <button id="generateBtn" onclick="generateKit()">
+                                                                                                          ⚡ Generate DevOps Kit
+                                                                                                              </button>
+
+                                                                                                                  <div id="output" class="output hidden">
+                                                                                                                        <div class="tabs">
+                                                                                                                                <button class="tab active" onclick="showTab('dockerfile')">Dockerfile</button>
+                                                                                                                                        <button class="tab" onclick="showTab('compose')">Docker Compose</button>
+                                                                                                                                                <button class="tab" onclick="showTab('cicd')">CI/CD Pipeline</button>
+                                                                                                                                                        <button class="tab" onclick="showTab('kubernetes')">Kubernetes</button>
+                                                                                                                                                                <button class="tab" onclick="showTab('readme')">README</button>
+                                                                                                                                                                      </div>
+                                                                                                                                                                            <div class="code-block">
+                                                                                                                                                                                    <button class="copy-btn" onclick="copyCode()">📋 Copy</button>
+                                                                                                                                                                                            <pre id="codeDisplay"></pre>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                          <script src="script.js"></script>
+                                                                                                                                                                                                          </body>
+                                                                                                                                                                                                          </html>

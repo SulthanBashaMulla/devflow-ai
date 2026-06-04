@@ -1,0 +1,171 @@
+* {
+      margin: 0;
+        padding: 0;
+          box-sizing: border-box;
+          }
+
+          body {
+            font-family: 'Segoe UI', sans-serif;
+              background: #0d1117;
+                color: #e6edf3;
+                  min-height: 100vh;
+                    padding: 20px;
+                    }
+
+                    .container {
+                      max-width: 800px;
+                        margin: 0 auto;
+                          padding: 20px;
+                          }
+
+                          h1 {
+                            font-size: 2rem;
+                              text-align: center;
+                          background: linear-gradient(90deg, #58a6ff, #bf91f3);
+                                  -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                      margin-bottom: 8px;
+                                      }
+
+                                      .subtitle {
+                                        text-align: center;
+                                          color: #8b949e;
+                                            margin-bottom: 30px;
+                                              font-size: 0.95rem;
+                                              }
+
+                                              .form-group {
+                                                margin-bottom: 20px;
+                                                }
+
+                                                label {
+                                                  display: block;
+                                                    margin-bottom: 8px;
+                                                      color: #58a6ff;
+                                                        font-weight: 600;
+                                                          font-size: 0.9rem;
+                                                          }
+
+                                                          textarea {
+                                                            width: 100%;
+                                                              height: 100px;
+                                                                background: #161b22;
+                                                                  border: 1px solid #30363d;
+                                                                    border-radius: 8px;
+                                                                      color: #e6edf3;
+                                                                        padding: 12px;
+                                                                          font-size: 0.95rem;
+                                                                            resize: vertical;
+                                                                            }
+
+                                                                            textarea:focus {
+                                                                              outline: none;
+                                                                                border-color: #58a6ff;
+                                                                                }
+
+                                                                                select {
+                                                                                  width: 100%;
+                                                                                    background: #161b22;
+                                                                                      border: 1px solid #30363d;
+                                                                                        border-radius: 8px;
+                                                                                          color: #e6edf3;
+                                                                                            padding: 12px;
+                                                                                              font-size: 0.95rem;
+                                                                                              }
+
+                                                                                              select:focus {
+                                                                                                outline: none;
+                                                                                                  border-color: #58a6ff;
+                                                                                                  }
+
+                                                                                                  button#generateBtn {
+                                                                                                    width: 100%;
+                                                                                                      padding: 14px;
+                                                                                                        background: linear-gradient(90deg, #58a6ff, #bf91f3);
+                                                                                                          border: none;
+                                                                                                            border-radius: 8px;
+                                                                                                              color: #0d1117;
+                                                                                                                font-size: 1rem;
+                                                                                                                  font-weight: 700;
+                                                                                                                    cursor: pointer;
+                                                                                                                      margin-bottom: 30px;
+                                                                                                                        transition: opacity 0.2s;
+                                                                                                                        }
+
+                                                                                                                        button#generateBtn:hover {
+                                                                                                                          opacity: 0.9;
+                                                                                                                          }
+
+                                                                                                                          button#generateBtn:disabled {
+                                                                                                                            opacity: 0.5;
+                                                                                                                              cursor: not-allowed;
+                                                                                                                              }
+
+                                                                                                                              .output {
+                                                                                                                                background: #161b22;
+                                                                                                                                  border: 1px solid #30363d;
+                                                                                                                                    border-radius: 12px;
+                                                                                                                                      overflow: hidden;
+                                                                                                                                      }
+
+                                                                                                                                      .output.hidden {
+                                                                                                                                        display: none;
+                                                                                                                                        }
+
+                                                                                                                                        .tabs {
+                                                                                                                                          display: flex;
+                                                                                                                                            overflow-x: auto;
+                                                                                                                                              background: #0d1117;
+                                                                                                                                                border-bottom: 1px solid #30363d;
+                                                                                                                                                }
+
+                                                                                                                                                .tab {
+                                                                                                                                                  padding: 10px 16px;
+                                                                                                                                                    background: none;
+                                                                                                                                                      border: none;
+                                                                                                                                                        color: #8b949e;
+                                                                                                                                                          cursor: pointer;
+                                                                                                                                                            font-size: 0.85rem;
+                                                                                                                                                              white-space: nowrap;
+                                                                                                                                                                transition: color 0.2s;
+                                                                                                                                                                }
+
+                                                                                                                                                                .tab.active {
+                                                                                                                                                                  color: #58a6ff;
+                                                                                                                                                                    border-bottom: 2px solid #58a6ff;
+                                                                                                                                                                    }
+
+                                                                                                                                                                    .code-block {
+                                                                                                                                                                      position: relative;
+                                                                                                                                                                        padding: 20px;
+                                                                                                                                                                        }
+
+                                                                                                                                                                        .copy-btn {
+                                                                                                                                                                          position: absolute;
+                                                                                                                                                                            top: 10px;
+                                                                                                                                                                              right: 10px;
+                                                                                                                                                                                background: #21262d;
+                                                                                                                                                                                  border: 1px solid #30363d;
+                                                                                                                                                                                    border-radius: 6px;
+                                                                                                                                                                                      color: #e6edf3;
+                                                                                                                                                                                        padding: 6px 12px;
+                                                                                                                                                                                          font-size: 0.8rem;
+                                                                                                                                                                                            cursor: pointer;
+                                                                                                                                                                                            }
+
+                                                                                                                                                                                            pre {
+                                                                                                                                                                                              color: #e6edf3;
+                                                                                                                                                                                                font-size: 0.85rem;
+                                                                                                                                                                                                  white-space: pre-wrap;
+                                                                                                                                                                                                    word-break: break-word;
+                                                                                                                                                                                                      line-height: 1.6;
+                                                                                                                                                                                                        margin-top: 10px;
+                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                        .loading {
+                                                                                                                                                                                                          text-align: center;
+                                                                                                                                                                                                            padding: 20px;
+                                                                                                                                                                                                              color: #8b949e;
+                                                                                                                                                                                                                font-size: 0.95rem;
+                                                                                                                                                                                                                }
+}
